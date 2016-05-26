@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Jquery plugin: drop-down menu, slider, checkbox, select</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/jquery.fs.selecter.css">
+    <link rel="stylesheet" href="css/jquery-labelauty-checkbox.css">
+    <link rel="stylesheet" href="css/roundabout.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
+    <script src="js/jquery.fs.selecter.min.js"></script>
+    <script src="js/jquery-labelauty-checkbox.js"></script>
+    <script src="js/roundabout.js"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="header__menu">
+            <nav>
+                <ul class="menu clearfix">
+                    <li class="menu__item">
+                        <a href="" class="menu__link">MainMenu item 1</a>
+                        <ul class="menu__submenu">
+                            <li class="menu__submenu-item">
+                                <a href="" class="menu__submenu-link">SubMenu Item 1</a>
+                            </li>
+                            <li class="menu__submenu-item">
+                                <a href="" class="menu__submenu-link">SubMenu Item 2</a>
+                            </li>
+                            <li class="menu__submenu-item">
+                                <a href="" class="menu__submenu-link">SubMenu Item 3</a>
+                            </li>
+                            <li class="menu__submenu-item">
+                                <a href="" class="menu__submenu-link">SubMenu Item 4</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu__item">
+                        <a href="" class="menu__link">MainMenu item 2</a>
+                        <ul class="menu__submenu">
+                            <li class="menu__submenu-item">
+                                <a href="" class="menu__submenu-link">SubMenu Item 1</a>
+                            </li>
+                            <li class="menu__submenu-item">
+                                <a href="" class="menu__submenu-link">SubMenu Item 2</a>
+                            </li>
+                            <li class="menu__submenu-item">
+                                <a href="" class="menu__submenu-link">SubMenu Item 3</a>
+                            </li>
+                            <li class="menu__submenu-item">
+                                <a href="" class="menu__submenu-link">SubMenu Item 4</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu__item">
+                        <a href="" class="menu__link">MainMenu item 3</a>
+                        <ul class="menu__submenu">
+                            <li class="menu__submenu-item">
+                                <a href="" class="menu__submenu-link">SubMenu Item 1</a>
+                            </li>
+                            <li class="menu__submenu-item">
+                                <a href="" class="menu__submenu-link">SubMenu Item 2</a>
+                            </li>
+                            <li class="menu__submenu-item">
+                                <a href="" class="menu__submenu-link">SubMenu Item 3</a>
+                            </li>
+                            <li class="menu__submenu-item">
+                                <a href="" class="menu__submenu-link">SubMenu Item 4</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu__item">
+                        <a href="" class="menu__link">MainMenu item 4</a>
+                        <ul class="menu__submenu">
+                            <li class="menu__submenu-item">
+                                <a href="" class="menu__submenu-link">SubMenu Item 1</a>
+                            </li>
+                            <li class="menu__submenu-item">
+                                <a href="" class="menu__submenu-link">SubMenu Item 2</a>
+                            </li>
+                            <li class="menu__submenu-item">
+                                <a href="" class="menu__submenu-link">SubMenu Item 3</a>
+                            </li>
+                            <li class="menu__submenu-item">
+                                <a href="" class="menu__submenu-link">SubMenu Item 4</a>
+                            </li>
+                        </ul>
+                    </li>    
+                    <li class="menu__item">
+                        <a href="" class="menu__link">MainMenu item 5</a>
+                        <ul     class="menu__submenu">
+                            <li class="menu__submenu-item">
+                                <a href="" class="menu__submenu-link">SubMenu Item 1</a>
+                            </li>
+                            <li class="menu__submenu-item">
+                                <a href="" class="menu__submenu-link">SubMenu Item 2</a>
+                            </li>
+                            <li class="menu__submenu-item">
+                                <a href="" class="menu__submenu-link">SubMenu Item 3</a>
+                            </li>
+                            <li class="menu__submenu-item">
+                                <a href="" class="menu__submenu-link">SubMenu Item 4</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div id="slide" class="slider horizontalLine">
+            <div  class="slider__wrapper">
+                <!-- SLADER SEASON -->
+                <ul class="slider__list slider__list-season">
+                    <li class="slider__item">
+                        <img src="img/season_1.jpg" alt="season-spring" class="slider__img">
+                    </li>
+                    <li class="slider__item">
+                        <img src="img/season_2.jpg" alt="season-summer" class="slider__img">
+                    </li>
+                    <li class="slider__item">
+                        <img src="img/season_3.jpg" alt="season-autumn" class="slider__img">
+                    </li>
+                    <li class="slider__item">
+                        <img src="img/season_4.jpg" alt="season-winter" class="slider__img">
+                    </li>
+                </ul>
+            </div>
+            
+        </div>
+        <div class="checkbox horizontalLine">
+            <h2 class="checkbox__head">Select checkbox of theme`s pictures that you like:</h2>
+            <label class="checkbox__value">
+                <span class="checkbox__name">Season images</span>
+                <input type="checkbox" class="checkbox__box" value="season">
+            </label>
+            <label class="checkbox__value">
+                <span class="checkbox__name">Nature images</span>
+                <input type="checkbox" class="checkbox__box" value="nature">
+            </label>
+            <label class="checkbox__value">
+                <span class="checkbox__name">Health images</span>
+                <input type="checkbox" class="checkbox__box" value="health">
+            </label>
+            <label class="checkbox__value">
+                <span class="checkbox__name">Coding images</span>
+                <input type="checkbox" class="checkbox__box" value="coding">
+            </label>
+            <label class="checkbox__value">
+                <span class="checkbox__name">All images</span>
+                <input type="checkbox" class="checkbox__box" value="all">
+            </label>
+        </div>
+        <div class="select horizontalLine">
+            <h2 class="select__head">Select theme`s pictures that you like from drop-down list:</h2>
+            <select class="select__images" name="select-images" id="">
+                <option value="season">Season images</option>
+                <option value="nature">Nature images</option>
+                <option value="health">Health images</option>
+                <option value="coding">Coding images</option>
+            </select>
+        </div>
+        <footer class="footer horizontalLine">
+            <p class="footer__design">Design by Neilo Y. 2016</p>
+        </footer>
+    </div>
+	<script src="js/script.js"></script>
+</body>
+</html>
