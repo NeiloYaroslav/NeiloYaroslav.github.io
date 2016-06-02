@@ -1,0 +1,109 @@
+.clearfix:after {
+	content: " ";
+	display: block;
+	clear: both;
+}
+
+.horizontalLine:before {
+    content: "";
+    display: block;
+    margin: 20px 0;
+    border-top: 1px solid #ccc;
+    box-shadow: 0 0 5px #bbb;
+}
+
+.center {
+    text-align: center;
+}
+
+
+body {
+    background: #ece6e6;
+    font-family: tahoma, ariel, sans-serif;
+}
+
+.wrapper {
+    width: 640px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #fff;
+}
+
+.header {
+    margin: 0 20px;
+}
+
+.header__name {
+    text-align: center;
+    font-size: 20px;
+}
+
+/*=====CONTENT=====*/
+
+.resume {
+    margin: 20px;
+}
+
+.resume__name {
+    text-align: center;
+    font-size: 18px;
+    text-decoration: underline;
+}
+
+.resume__img {
+    display: block;
+    margin: 20px auto;
+    border: 5px double #bbb;
+    box-shadow: 0 0 5px #888;
+
+    
+}
+
+.resume__item {
+    margin: 10px;
+    
+}
+
+.resume__title {
+    float: left;
+    width: 20%;
+}
+
+.resume__text {
+    width: 80%;
+    margin-left: 20%;
+    margin-bottom: 5px;
+    line-height: 18px;
+}
+
+
+
+
+/*=====FOOTER=====*/
+.footer {
+    margin: 10px 20px;
+    text-align: right;
+}
+
+/*
+.footer:after {
+    content: "";
+    display: block;
+    margin: 20px 20px 5px 20px;
+    border-top: 1px solid #ccc;
+}
+*/
+
+.footer__design {
+    margin: 0 20px;
+}
+
+
+
+
+
+
+
+
+
+

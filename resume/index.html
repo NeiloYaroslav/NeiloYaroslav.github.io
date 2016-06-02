@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>JS - Template</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
+	<script src="js/template.js"></script>
+	<script src="js/resume.js"></script>
+	<script src="js/script.js"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="header horizontalLine">
+            <h1 class="header__name">Template</h1>
+        </div>
+        <div class="template">
+            <script type="text/template" id="resume">
+                <div class="resume horizontalLine">
+                    <h2 class="resume__name">
+                        <%= resume.contact.name + ' ' + resume.contact.lastName %>
+                    </h2>
+                    <img class="resume__img" src="<%= resume.contact.src %>" alt="Photo by <%= resume.contact.name + ' ' + resume.contact.lastName %>">
+                    <div class="resume__item">
+                        <h3 class="resume__title">Date of birth:</h3>
+                        <p class="resume__text"><%= resume.contact.dataBirthday %></p>
+                        <h3 class="resume__title">Residence:</h3>
+                        <p class="resume__text"><%= resume.contact.residence %></p>
+                        <h3 class="resume__title">Skype:</h3>
+                        <p class="resume__text"><%= resume.contact.skype %></p>
+                        <h3 class="resume__title">Mobile:</h3>
+                        <p class="resume__text"><%= resume.contact.mobile %></p>
+                        <h3 class="resume__title">E-mail:</h3>
+                        <p class="resume__text"><%= resume.contact.email %></p>
+                        <h3 class="resume__title">Git:</h3>
+                        <p class="resume__text"><a href="<%= resume.contact.git %>" target="_blanck"><%= resume.contact.git %></a></p>
+                        <h3 class="resume__title">LinkedIn:</h3>
+                        <p class="resume__text"><a href="<%= resume.contact.linkedin %>" target="_blanck"><%= resume.contact.linkedin %></a></p>
+                    </div>
+                    <div class="resume__item horizontalLine">
+                        <h3 class="resume__title">Objective:</h3>
+                        <p class="resume__text"><%= resume.objective.title + ' ' + resume.objective.text %></p>
+                    </div>
+                    <div class="resume__item horizontalLine">
+                        <h3 class="resume__title">Summary:</h3>
+                        <p class="resume__text"><%= resume.summary.text %></p>
+                    </div>
+                    <div class="resume__item horizontalLine">
+                        <h3 class="resume__title">Technical skills:</h3>
+                        <% for (var i = 0; i < techSkills.length; i++ ) { %>
+                        <p class="resume__text"><%= resume.techSkills[i] + ', ' %></p>
+                        <% } %>
+                    </div>
+                    <div class="resume__item horizontalLine">
+                        <h3 class="resume__title">Projects:</h3>
+                        <% for (var i = 0; i < projects.length; i++ ) { %>
+                        <p class="resume__text"><a href="<%= resume.projects[i] %>"><%= resume.projects[i] %></a></p>
+                        <% } %>
+                    </div>
+                    <div class="resume__item horizontalLine">
+                        <h3 class="resume__title">Work Experience:</h3>
+                        <% for (var i = 0; i < workExperience.length; i++ ) { %>
+                        <p class="resume__text">
+                            <span><%= resume.workExperience[i].year + ' - ' %></span>
+                            <span>worked in <%= resume.workExperience[i].company %></span>
+                            <span>on <%= resume.workExperience[i].position %>  position. </span>
+                            <span>My responsibility is <%= resume.workExperience[i].responsibility %>.</span>
+                        </p>
+                        <% } %>
+                    </div>
+                    <div class="resume__item horizontalLine">
+                        <h3 class="resume__title">Additional Education:</h3>
+                        <% for (var i = 0; i < additionalEducation.length; i++ ) { %>
+                        <p class="resume__text"><%= resume.additionalEducation[i].year + ': ' + resume.additionalEducation[i].education %></p>
+                        <% } %>
+                    </div>
+                    <div class="resume__item horizontalLine">
+                        <h3 class="resume__title">Language:</h3>
+                        <% for (var i = 0; i < language.length; i++ ) { %>
+                        <p class="resume__text"><%= resume.language[i] %></p>
+                        <% } %>
+                    </div>
+                </div>
+                
+            </script>   
+        </div>
+        <footer class="footer horizontalLine">
+            <p class="footer__design">Design by Neilo Y. 2016</p>
+        </footer>
+    </div>
+    
+</body>
+</html>
