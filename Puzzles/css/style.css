@@ -1,0 +1,104 @@
+body {
+    background: #ece6e6;
+    font-family: tahoma, ariel, sans-serif;
+}
+
+.wrapper {
+    width: 480px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 0 5px #888;
+}
+
+.clearfix:after {
+	content: " ";
+	display: block;
+	clear: both;
+}
+
+.horizontalLine:before {
+    content: "";
+    display: block;
+    margin: 20px 0;
+    border-top: 1px solid #ccc;
+    box-shadow: 0 0 5px #bbb;
+}
+
+
+.header__name {
+    font-size: 24px;
+    text-align: center;
+    line-height: 36px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*=====PUZZLES=====*/
+
+
+.test__headName {
+    padding: 5px 0;
+    text-align: center;
+    font-size: 20px;
+}
+
+.test__list-question {
+    padding: 0 20px;
+}
+
+.test__question {
+    padding: 5px 0;
+    font-size: 14px;
+    font-weight: bold;
+
+}
+
+.test__list-answer {
+    padding: 0 20px;
+    list-style: none;
+}
+
+.test__answer-item {
+    padding: 5px 0;
+}
+
+.test__answer {
+    padding: 5px 0;
+}
+
+.test__label {
+    cursor: pointer;
+}
+
+.checkbox {
+    margin: 0 5px;
+}
+
+
+.submit {
+    display: block;
+    width: 50%;
+    margin: 10px auto;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background: #94cdfd;
+}
+
+/*=====FOOTER=====*/
+.footer {
+    margin: 10px 20px;
+    text-align: right;
+}
+
+.footer__design {
+    margin: 0 20px;
+}
