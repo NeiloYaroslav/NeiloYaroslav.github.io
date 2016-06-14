@@ -8,25 +8,44 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
 	<script src="js/template.js"></script>
 	<script src="js/puzzles.js"></script>
-<!--	<script src="js/createTest.js"></script>-->
 </head>
 <body>
 	<div class="wrapper">
         <div class="header">
-            <h1 class="header__name">Create test with using tamplate, JSON, localStorage, try..catch, use strict, modal window</h1>
+            <h1 class="header__name">Create test with using tamplate, JSON, localStorage, use strict, modal window</h1>
         </div>
         <div class="puzzles horizontalLine">
-            <script type="text/template" id="puzzles">
-            
+            <script id="puzzles" type="text/template">
+                <h2 class="puzzles__name">Puzzles</h2>
+                <form>
+                    <ol class="puzzles__list">
+                        <% for (var i = 0; i < puzzles.length; i++){ %>
+                            <li class="puzzles__question-item">
+                                <p class="puzzles__question">
+                                    <%= puzzles[i].question %>
+                                </p>
+                                <ol class="puzzles__sublist">
+                                    <% for (var j = 0; j < puzzles[i].answer.length; j++){ %>
+                                    <li class="puzzles__item">
+                                        <label class="form__label">
+                                            <input class="form__radio" type="radio" name=<%= "answer" + [i] %>>
+                                            <span class="form__answer"><%= puzzles[i].answer[j] %></span>
+                                        </label>
+                                    </li>
+                                    <% } %>
+                                </ol>
+                            </li>
+                        <% } %>
+                    </ol>
+                    <input class="form__submit" type="submit" value="Проверить">
+                </form>
             </script>   
         </div>
         <footer class="footer horizontalLine">
             <p class="footer__design">Design by Neilo Y. 2016</p>
         </footer>
-	
-	
-	
-	
+    </div>
+
 	<script src="js/script.js"></script>
 </body>
 </html>
