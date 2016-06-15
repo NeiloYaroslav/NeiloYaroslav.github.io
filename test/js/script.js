@@ -5,6 +5,19 @@
 ;(function(){
     'use strict';
 
+    //====TASK====
+    
+    $('#task__show').on('click', function(){
+        $('.header__task').find('.displayNone').removeClass('displayNone');
+        
+    });
+    
+    $('#task__hide').on('click', function(){
+        $('.task__list').addClass('displayNone');
+        $('#task__hide').addClass('displayNone');
+    });
+    
+    
     //=====TEMPLATE=====
     var $puzzles = $('#puzzles').html();
 
@@ -24,73 +37,76 @@
     
     console.log('correctAnswerArr: ', correctAnswerArr);
     
-    //Create class "selected" from selected answer
-
-    var $radio = $('.form__radio');
+        
     var userAnswerArr = [];
+    var $puzzlesSublist = $('.puzzles__sublist');
     
-//    $radio.on('click', function(){
-//        $(this).siblings('.form__answer').addClass('selected');
-//            
-//        var $userAnswer = $("input:checked").siblings('.form__answer').html();
-//            
-//        userAnswerArr.push($userAnswer);
-//        console.log(userAnswerArr);
-//        
-//        
-//        if ($radio.is(':checked')) {
-//            $('.selected').removeClass('selected');
-//        } else {
-//            var $attr = $(this).attr('name');
-//            console.log($attr);
-//            
-////            .$('.selected').removeClass('.selected');
-//        };
-//        console.log($radio.is(':checked'));
-//    });
-    
-
-    
-    
-    var button = $('.form__submit');
-
-    button.mousedown(function(e){
-        
-        button.addClass('submit-click');
-    });
-    
-    button.mouseup(function(e){
-        
-        button.removeClass('submit-click');
-    });
-    
-    
-    button.on('click', function(e){
+    $('#submit').on('click', function(e){
         e.preventDefault();
         
         //Create arrey with user answer 
-        var $puzzlesSublist = $('.puzzles__sublist');
-        console.log($puzzlesSublist[1]);
-        
-        for (var i = 0; i < testPuzzles.length; i++ ) {
-            var $answer = $puzzlesSublist.find('input:checked').siblings('.form__answer').html();
+        for (var i = 0; i < $puzzlesSublist.length; i++ ) {
+            var $checked = $($puzzlesSublist[i]).find('input:checked').siblings('.form__answer').html();
             
-            userAnswerArr.push($answer);
+            userAnswerArr.push($checked);
+        };
+        
+        console.log('userAnswerArr: ', userAnswerArr);
+        
+        //Create modal window
+        
+        var $modal = $('<div class="puzzles__modal"><div class="modal__wrapper"><div class="modal"><p class="modal__text"></p><div class="modal__button"><input type="reset"  value="Повторить" class="button" id="buttonRepeat"><input type="button" value="Выйти" class="button" id="buttonExit"></div></div></div></div>');
+        
+        $('.puzzles').append($modal);
+        
+        var $modalText = $('.modal__text');
+        
+        
+        //Checked user answer on puzzles
+        for (var i = 0; i < correctAnswerArr.length; i++ ) {
+            if (correctAnswerArr[i] == userAnswerArr[i]) {
+                $modalText.text('Поздравляю! Все загадки отгаданы верно =)');
+            } else {
+                $modalText.text('Увы! Вы где-то ошиблись');
+            };
+        };
+        
+        //Remove modal window
+        function exitModal() {
+            $(".puzzles__modal").remove();
+            userAnswerArr = [];
         }
-        console.log(userAnswerArr);
+        
+        $('.modal__wrapper').one('click', exitModal);
+        $('#buttonExit').one('click', exitModal);
         
         
         
         
         
-        var $userAnswer = $("input:checked").siblings('.form__answer').html();
         
-        userAnswerArr.push($userAnswer);
-        
-        console.log(userAnswerArr);
-        
-    })
+    });
 
+    //Create submit-ckick style
+    
+    var button = $('.button');
+    
+    button.mousedown(function(e){
+
+        button.addClass('button-click');
+    });
+
+    button.mouseup(function(e){
+
+        button.removeClass('button-click');
+    });
+    
+    
+    
+    
+    
+    
+    
 
 
 })();

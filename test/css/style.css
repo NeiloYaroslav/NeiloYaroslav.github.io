@@ -25,6 +25,10 @@ body {
     box-shadow: 0 0 5px #bbb;
 }
 
+.displayNone {
+    display: none;
+}
+
 /*=====HEADER=====*/
 
 .header__name {
@@ -33,14 +37,32 @@ body {
     line-height: 20px;
 }
 
-.header__homework {
-    padding: 10px 20px;
+/*====TASK====*/
+
+.header__task {
+    padding: 10px 0;
     list-style: decimal;
 }
 
-.homework__item {
-    margin: 10px;
+.task__link {
+    
 }
+
+.task__list {
+    list-style: decimal;
+}
+
+.task__item {
+    margin: 10px 0 10px 20px;
+    line-height: 18px;
+}
+
+
+
+
+
+
+
 
 /*=====PUZZLES=====*/
 
@@ -86,7 +108,7 @@ body {
 }
 
 
-.form__submit {
+.button {
     display: block;
     width: 50%;
     margin: 10px auto;
@@ -98,18 +120,57 @@ body {
     box-shadow: 0 0 3px #888;
 }
 
-.form__submit:hover {
+.button:hover {
     background: #eee;
     cursor: pointer;
     
 }
 
-.submit-click {
+.button-click {
     background: transparent;
     cursor: pointer;
     box-shadow: inset 0 0 5px #888;
     
 }
+/*=====MODAL=====*/
+.modal__wrapper {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.3);
+    
+}
+
+.modal {
+    position: relative;
+    width: 420px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 20px;
+    text-align: center;
+    z-index: 100;
+}
+
+.modal__text {
+    padding: 10px;
+    font-size: 18px;
+}
+
+.modal__button {
+
+}
+
+
+
+
+
+
+
 
 /*=====FOOTER=====*/
 .footer {

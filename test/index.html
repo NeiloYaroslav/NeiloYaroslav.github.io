@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8" />
-    <title>JavaScript#13-14</title>
+    <title>Puzzles</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
@@ -13,6 +13,27 @@
 	<div class="wrapper">
         <div class="header">
             <h1 class="header__name">Create test with using tamplate, JSON, localStorage, use strict, modal window</h1>
+            <div class="header__task">
+                <a href="#" id="task__show" class="task__link">Посмотреть задание</a>
+                <ol class="task__list displayNone">
+                    <li class="task__item">
+                        Создать тест. Перед стартом приложения записать в localStorage объект с вопросами и ответами теста. Потом прочесть данные из localStorage, отрендерить их используя любой javascript-шаблонизатор.
+                    </li>
+                    <li class="task__item">
+                        Так же в приложении должна быть прописана директива 'use strict;', в консоли не должно быть никаких javascript-ошибок.
+                    </li>
+                    <li class="task__item">
+                        На странице должна быть возможность пройти тест. При клике на кнопку "Проверить" нужно выполнить проверку правильных ответов и вывести сообщение об успешном или не успешном прохождении теста. После вывода сообщения, обнулить отметки чтоб тест можно было пройти опять.
+                    </li>
+                    <li class="task__item">
+                        В каждом вопросе может быть только один правильный вариант ответа.
+                    </li>
+                    <li class="task__item">
+                        Само сообщение о результатах теста нужно сделать в стиле простого модального окна. Верстка и код появления модальки должны быть написаны вами.
+                    </li>
+                </ol>
+                <a href="#" id="task__hide" class="task__link displayNone">Свернуть</a>
+            </div>
         </div>
         <div class="puzzles horizontalLine">
             <script id="puzzles" type="text/template">
@@ -37,7 +58,7 @@
                             </li>
                         <% } %>
                     </ol>
-                    <input class="form__submit" type="submit" value="Проверить">
+                    <input class="button" id="submit" type="submit" value="Проверить">
                 </form>
             </script>   
         </div>
