@@ -55,7 +55,7 @@
         
         //Create modal window
         
-        var $modal = $('<div class="puzzles__modal"><div class="modal__wrapper"><div class="modal"><p class="modal__text"></p><div class="modal__button"><input type="reset"  value="Повторить" class="button" id="buttonRepeat"><input type="button" value="Выйти" class="button" id="buttonExit"></div></div></div></div>');
+        var $modal = $('<div class="puzzles__modal"><div class="modal__wrapper"><div class="modal"><p class="modal__text"></p><div class="modal__button"><input type="reset"  value="Повторить" class="button" id="buttonReset"><input type="button" value="Выйти" class="button" id="buttonExit"></div></div></div></div>');
         
         $('.puzzles').append($modal);
         
@@ -77,12 +77,18 @@
             userAnswerArr = [];
         }
         
-        $('.modal__wrapper').one('click', exitModal);
+        function resetForm(){
+            for (var i = 0; i < $('.form__radio').length; i++) {
+                $('input')[i].checked = false;
+            };
+            $(".puzzles__modal").remove();
+            userAnswerArr = [];
+        }
+        
+//        $('.modal__wrapper').one('click', exitModal);
         $('#buttonExit').one('click', exitModal);
         
-        
-        
-        
+        $('#buttonReset').one('click', resetForm);
         
         
     });
