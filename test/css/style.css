@@ -122,15 +122,13 @@ body {
 
 .button:hover {
     background: #eee;
-    cursor: pointer;
-    
+    cursor: pointer; 
 }
 
-.button-click {
+.button:active {
     background: transparent;
     cursor: pointer;
     box-shadow: inset 0 0 5px #888;
-    
 }
 /*=====MODAL=====*/
 .modal__wrapper {

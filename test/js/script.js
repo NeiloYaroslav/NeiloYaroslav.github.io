@@ -60,16 +60,26 @@
         $('.puzzles').append($modal);
         
         var $modalText = $('.modal__text');
-        
+        var score = 0;
         
         //Checked user answer on puzzles
         for (var i = 0; i < correctAnswerArr.length; i++ ) {
-            if (correctAnswerArr[i] == userAnswerArr[i]) {
+            if (correctAnswerArr[i] === userAnswerArr[i]) {
+                score++;
+                console.log(score);
+            };
+        };
+        
+        //Checked user answer on puzzles
+        for (var i = 0; i < correctAnswerArr.length; i++ ) {
+            if (score === 5) {
                 $modalText.text('Поздравляю! Все загадки отгаданы верно =)');
             } else {
                 $modalText.text('Увы! Вы где-то ошиблись');
             };
         };
+        
+        
         
         //Remove modal window
         function exitModal() {
@@ -92,28 +102,6 @@
         
         
     });
-
-    //Create submit-ckick style
-    
-    var button = $('.button');
-    
-    button.mousedown(function(e){
-
-        button.addClass('button-click');
-    });
-
-    button.mouseup(function(e){
-
-        button.removeClass('button-click');
-    });
-    
-    
-    
-    
-    
-    
-    
-
 
 })();
 
